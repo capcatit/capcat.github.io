@@ -3,34 +3,34 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div id="wrapper" class="fade-in">
+    <div id="wrapper" className="fade-in">
 				{/* <!-- Intro --> */}
 					<div id="intro">
 						<h1>CAP<br />
 						CAT</h1>
 						<p>TECNOLOGIA ALLA TUA PORTATA.</p>
-						<ul class="actions">
-							<li><a href="#services" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						<ul className="actions">
+							<li><a href="#services" className="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
 
 				{/* <!-- Header --> */}
 					<header id="header">
-						<img src="images/logo.png" class="logo" />
+						<img src="images/logo.png" className="logo" />
 						{/* <!-- <a href="index.html" >Massively</a> --> */}
 					</header>
 
 				{/* <!-- Nav --> */}
 					<nav id="nav">
-						<ul class="links">
-							<li class="active" id="service__tab"><a href="#services">Servizi</a></li>
+						<ul className="links">
+							<li className="active" id="service__tab"><a href="#services">Servizi</a></li>
 							<li id="about-us__tab"><a href="#about-us">Chi siamo</a></li>
 						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<ul className="icons">
+							<li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+							<li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
+							<li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+							<li><a href="#" className="icon brands fa-github"><span className="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -38,93 +38,93 @@ export default function Home() {
 					<div id="main">
 
 						{/* <!-- Featured Post --> */}
-							<article id="about-us" class="post featured">
-								<header class="major">
-									{/* <!-- <span class="date">April 25, 2017</span> --> */}
+							<article id="about-us" className="post featured">
+								<header className="major">
+									{/* <!-- <span className="date">April 25, 2017</span> --> */}
 									{/* <!-- <h2><a href="#">And this is a<br /> */}
 									{/* massive headline</a></h2> --> */}
 									<p>Siamo un gruppo di professionisti e nerds della regione Veneto con ampia esperienza<br/>
 									<br />
 									mobile, cloud, web.</p>
 								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Contattaci</a></li>
+								<a href="#" className="image main"><img src="images/pic01.jpg" alt="" /></a>
+								<ul className="actions special">
+									<li><a href="#" className="button large">Contattaci</a></li>
 								</ul>
 							</article>
 
 						{/* <!-- Posts --> */}
-							<section class="posts" id="services">
+							<section className="posts" id="services">
 								<article>
-									<header class="service__header">
-										{/* <!-- <span class="date">April 24, 2017</span> */}
+									<header className="service__header">
+										{/* <!-- <span className="date">April 24, 2017</span> */}
 										 {/* --> */}
 
 										<h2><a href="#">porta la tua azienda <br />
 											sul cloud</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/pic02.jpg" alt="" /></a>
 									<p>Amazon Web Service, Google Cloud, Azure IBM Cloud.</p>
-									<ul class="actions special">
-										<li><a href="#footer" class="button">Contattaci</a></li>
+									<ul className="actions special">
+										<li><a href="#footer" className="button">Contattaci</a></li>
 									</ul>
 								</article>
 								<article>
-									<header class="service__header">
-										{/* <!-- <span class="date">April 22, 2017</span> --> */}
+									<header className="service__header">
+										{/* <!-- <span className="date">April 22, 2017</span> --> */}
 										<h2><a href="#">raccontaci i tuoi <br />
 											problemi</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/pic03.jpg" alt="" /></a>
 									<p>E noi troviamo la tua soluzione digitale.</p>
-									<ul class="actions special">
-										<li><a href="#footer" class="button">Contattaci</a></li>
+									<ul className="actions special">
+										<li><a href="#footer" className="button">Contattaci</a></li>
 									</ul>
 								</article>
 								<article>
-									<header class="service__header">
-										{/* <!-- <span class="date">April 18, 2017</span> --> */}
+									<header className="service__header">
+										{/* <!-- <span className="date">April 18, 2017</span> --> */}
 										<h2><a href="#">Sviluppo su <br />
 											misura</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/development.png" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/development.png" alt="" /></a>
 									<p>Esperti in Java, Javascript e diversi framework come Angular e React.</p>
-									<ul class="actions special">
-										<li><a href="#footer" class="button">Contattaci</a></li>
+									<ul className="actions special">
+										<li><a href="#footer" className="button">Contattaci</a></li>
 									</ul>
 								</article>
 								<article>
-									<header class="service__header">
-										{/* <!-- <span class="date">April 14, 2017</span> --> */}
+									<header className="service__header">
+										{/* <!-- <span className="date">April 14, 2017</span> --> */}
 										<h2><a href="#">Salesforce<br /></a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/saleforce.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/saleforce.jpg" alt="" /></a>
 									<p>Scopri come Salesforce può migliorare il tuo processo di vendita.</p>
-									<ul class="actions special">
-										<li><a href="#footer" class="button">Contattaci</a></li>
+									<ul className="actions special">
+										<li><a href="#footer" className="button">Contattaci</a></li>
 									</ul>
 								</article>
 								<article>
-									<header class="service__header">
-										{/* <!-- <span class="date">April 11, 2017</span> --> */}
+									<header className="service__header">
+										{/* <!-- <span className="date">April 11, 2017</span> --> */}
 										<h2><a href="#">Mobile apps<br />
 										</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/mobile-500.png" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/mobile-500.png" alt="" /></a>
 									<p>Inviaci i tuoi requisiti e ottieni un preventivo.</p>
-									<ul class="actions special">
-										<li><a href="#footer" class="button">Contattaci</a></li>
+									<ul className="actions special">
+										<li><a href="#footer" className="button">Contattaci</a></li>
 									</ul>
 								</article>
 								<article>
-									<header class="service__header">
-										{/* <!-- <span class="date">April 7, 2017</span> --> */}
+									<header className="service__header">
+										{/* <!-- <span className="date">April 7, 2017</span> --> */}
 										<h2><a href="#">Graphic Design<br /></a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/pic07.jpg" alt="" /></a>
 									<p>Lasciati consigliare dai nostri esperti.</p>
-									<ul class="actions special">
-										<li><a href="#footer" class="button">Contattaci</a></li>
+									<ul className="actions special">
+										<li><a href="#footer" className="button">Contattaci</a></li>
 									</ul>
 								</article>
 							</section>
@@ -134,28 +134,28 @@ export default function Home() {
 					<footer id="footer">
 						<section>
 							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Nome</label>
+								<div className="fields">
+									<div className="field">
+										<label htmlFor="name">Nome</label>
 										<input id="form__name" type="text" name="name" id="name" />
 									</div>
-									<div class="field">
-										<label for="email">Email</label>
+									<div className="field">
+										<label htmlFor="email">Email</label>
 										<input id="form__email" type="text" name="email" id="email" />
 									</div>
-									<div class="field">
-										<label for="message">Messagio</label>
+									<div className="field">
+										<label htmlFor="message">Messagio</label>
 										<textarea id="form__message" name="message" id="message" rows="3"></textarea>
 									</div>
 								</div>
-								<ul class="actions">
+								<ul className="actions">
 									<li><input type="submit" value="Send Message" /></li>
 									<li><input id="form__submit-wsp" type="submit" value="Send Message Whatsapp" /></li>
 								</ul>
 							</form>
 						</section>
-						<section class="split contact">
-							<section class="alt">
+						<section className="split contact">
+							<section className="alt">
 								<h3>Indirizzo</h3>
 								<p>Via padre bernardino dal vago 10<br />
 								</p>
@@ -166,11 +166,11 @@ export default function Home() {
 							</section>
 							<section>
 								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<ul className="icons alt">
+									<li><a href="#" className="icon brands alt fa-twitter"><span className="label">Twitter</span></a></li>
+									<li><a href="#" className="icon brands alt fa-facebook-f"><span className="label">Facebook</span></a></li>
+									<li><a href="#" className="icon brands alt fa-instagram"><span className="label">Instagram</span></a></li>
+									<li><a href="#" className="icon brands alt fa-github"><span className="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>
