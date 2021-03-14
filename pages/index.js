@@ -14,8 +14,16 @@ export default function Home() {
 	function sendMailMessage($event) {
 		$event.preventDefault()
 		console.log(`click`);
-		console.log(this.state)
 	}
+	function onClickServiceTab(e) {
+		console.log(e)
+		activeTab = activeTab === 'active' ? '' : 'active'
+	}
+	function onClickAboutTab(e) {
+		console.log(e)
+		activeTab = activeTab === 'active' ? '' : 'active'
+	}
+	
   return (
     <div id="wrapper" className="fade-in">
 				{/* <!-- Intro --> */}
@@ -36,8 +44,12 @@ export default function Home() {
 					</header>
 					<nav id="nav">
 						<ul className="links">
-							<li className="active" id="service__tab"><a href="#services">{t('links-services')}</a></li>
-							<li id="about-us__tab"><a href="#about-us">{t('links-about-us')}</a></li>
+							<li onClick={onClickServiceTab} className='active' id="service__tab">
+								<a href="#services">{t('links-services')}</a>
+							</li>
+							<li onClick={onClickAboutTab} id="about-us__tab">
+								<a href="#about-us">{t('links-about-us')}</a>
+							</li>
 						</ul>
 						<ul className="icons">
 							<li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
@@ -56,7 +68,7 @@ export default function Home() {
 									<br />
 									Cloud, Mobile, Web.</p>
 								</header>
-								<a href="#" className="image main"><img src="images/pic01.jpg" alt="" /></a>
+								<a href="#" className="image main"><img src="images/our-team.jpg" alt="" /></a>
 								<ul className="actions special">
 									<li><a href="#footer" className="button large">{t('button-contact-us')}</a></li>
 								</ul>
@@ -72,7 +84,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-cloud')} <br />
                     {t('services-cloud-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/cloud.jpg" alt="" /></a>
 									<p>Amazon Web Service, Google Cloud, Azure IBM Cloud.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -84,7 +96,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-problem-solving')} <br />
                     {t('services-problem-solving-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/problem-solving.jpg" alt="" /></a>
 									<p>{t('services-problem-solving-3')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -96,7 +108,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-development')}<br />
                     {t('services-development-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/development.png" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/code.jpg" alt="" /></a>
 									<p>{t('services-development-3')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -130,7 +142,7 @@ export default function Home() {
 										{/* <!-- <span className="date">April 7, 2017</span> --> */}
 										<h2><a href="#">Graphic Design<br /></a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/pic07.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/graphic-design.jpg" alt="" /></a>
 									<p>{t('services-graphic-design')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
