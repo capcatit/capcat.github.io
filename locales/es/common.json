@@ -18,5 +18,6 @@
   "services-graphic-design": "Nuestros expertos pueden llevar lo que tienes en mente al mundo digital y generar un impacto positivo en tus clientes",
   "form-name": "Nombre",
   "form-message": "Mensaje",
-  "form-address": "Dirección"
+  "form-address": "Dirección",
+  "form-submit": "Enviar Mensaje"
 }

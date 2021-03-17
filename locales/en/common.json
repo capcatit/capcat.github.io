@@ -18,5 +18,6 @@
   "services-graphic-design": "Our experts can bring yours ideas to life",
   "form-name": "Name",
   "form-message": "Message",
-  "form-address": "Address"
+  "form-address": "Address",
+  "form-submit": "Send Message"
 }
