@@ -1,5 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import  React, { useState } from 'react'
+
 export default function Home() {
 	const { t } = useTranslation('common')
 	const [email, setEmail] = useState('')
@@ -56,7 +57,8 @@ export default function Home() {
 	}
 	
   return (
-    <div id="wrapper" className="fade-in">
+			<body>
+			<div id="wrapper" className="fade-in">
 					<div id="intro">
 						<h1>CAP<br />
 						CAT</h1>
@@ -82,9 +84,6 @@ export default function Home() {
 							</li>
 						</ul>
 						<ul className="icons">
-							<li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-							<li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-							<li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
 							<li><a href="https://github.com/capcatit/capcat.github.io" className="icon brands fa-github"><span className="label">GitHub</span></a></li>
 						</ul>
 					</nav>
@@ -95,7 +94,7 @@ export default function Home() {
 									<br />
 									Cloud, Mobile, Web.</p>
 								</header>
-								<a href="#" className="image main"><img src="images/our-team.jpg" alt="" /></a>
+								<a href="#" className="image main"><img src="images/our-team.jpg" alt="Cloud, Mobile, Web" /></a>
 								<ul className="actions special">
 									<li><a href="#footer" className="button large">{t('button-contact-us')}</a></li>
 								</ul>
@@ -108,7 +107,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-cloud')} <br />
                     {t('services-cloud-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/amazon-web-service-google-cloud.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/amazon-web-service-google-cloud.jpg" alt="Amazon Web Service, Google Cloud, Azure IBM Cloud" /></a>
 									<p>Amazon Web Service, Google Cloud, Azure IBM Cloud.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -119,7 +118,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-problem-solving')} <br />
                     {t('services-problem-solving-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/problem-solving.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/problem-solving.jpg" alt="soluzioni digitali" /></a>
 									<p>{t('services-problem-solving-3')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -130,7 +129,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-development')}<br />
                     {t('services-development-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/free-lance-software-applicazione.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/free-lance-software-applicazione.jpg" alt="free lance software" /></a>
 									<p>{t('services-development-3')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -140,7 +139,7 @@ export default function Home() {
 									<header className="service__header">
 										<h2><a href="#">Salesforce<br /></a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/saleforce.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/saleforce.jpg" alt="saleforce implementazione" /></a>
 									<p>{t('services-salesforce')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -151,7 +150,9 @@ export default function Home() {
 										<h2><a href="#">Mobile apps<br />
 										</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/mobile-500.png" alt="" /></a>
+									<a href="#" className="image fit">
+										<img src="images/sviluppo-mobile-android-ios-500.png" alt="Sviluppo mobile android e ios" />
+									</a>
 									<p>{t('services-quotation')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -161,7 +162,7 @@ export default function Home() {
 									<header className="service__header">
 										<h2><a href="#">Graphic Design<br /></a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/graphic-design.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/graphic-design.jpg" alt="disegno grafico" /></a>
 									<p>{t('services-graphic-design')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -225,7 +226,7 @@ export default function Home() {
 					<div id="copyright">
 						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
-
 			</div>
+			</body>
   )
 }
