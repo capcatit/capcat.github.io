@@ -84,7 +84,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-cloud')} <br />
                     {t('services-cloud-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/cloud.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/amazon-web-service-google-cloud.jpg" alt="" /></a>
 									<p>Amazon Web Service, Google Cloud, Azure IBM Cloud.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
@@ -108,7 +108,7 @@ export default function Home() {
 										<h2><a href="#">{t('services-development')}<br />
                     {t('services-development-2')}</a></h2>
 									</header>
-									<a href="#" className="image fit"><img src="images/code.jpg" alt="" /></a>
+									<a href="#" className="image fit"><img src="images/free-lance-software-applicazione.jpg" alt="" /></a>
 									<p>{t('services-development-3')}.</p>
 									<ul className="actions special">
 										<li><a href="#footer" className="button">{t('button-contact-us')}</a></li>
