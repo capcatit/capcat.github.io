@@ -174,15 +174,15 @@ export default () => {
 								<div className="fields">
 									<div className="field">
 										<label htmlFor="name">{t('form-name')}</label>
-										<input id="form__name" onChange={onChangeName} type="text" name="name" id="name" />
+										<input id="form__name" onChange={onChangeName} type="text" name="name" />
 									</div>
 									<div className="field">
 										<label htmlFor="email">Email </label>
-										<input id="form__email" onChange={onChangeEmail} type="email" name="email" id="email" />
+										<input id="form__email" onChange={onChangeEmail} type="email" name="email" />
 									</div>
 									<div className="field">
 										<label htmlFor="message">{t('form-message')}</label>
-										<textarea id="form__message" onChange={onChangeMessage} name="message" id="message" rows="3"></textarea>
+										<textarea id="form__message" onChange={onChangeMessage} name="message" rows="3"></textarea>
 									</div>
 								</div>
 								<ul className="actions">
