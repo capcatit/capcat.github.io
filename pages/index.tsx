@@ -1,11 +1,12 @@
+import React, { useState } from "react";
 import useTranslation from 'next-translate/useTranslation'
-import  React, { useState } from 'react'
 
-export default function Home() {
-	const { t } = useTranslation('common')
+export default () => {
+  const { t } = useTranslation('common')
 	const [email, setEmail] = useState('')
 	const [name, setName] = useState('')
-	const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('')
+  let activeTab = 'services';
 	function sendWspMessage($event) {
 		$event.preventDefault()
 		window.open(
@@ -24,14 +25,11 @@ export default function Home() {
 		}
 		
 	}
-	function onClickServiceTab(e) {
+	function onClickTab(e) {
 		console.log(e)
-		activeTab = activeTab === 'active' ? '' : 'active'
+		activeTab = activeTab === 'services' ? 'about-us' : 'services'
 	}
-	function onClickAboutTab(e) {
-		console.log(e)
-		activeTab = activeTab === 'active' ? '' : 'active'
-	}
+	
 	function onChangeMessage($event) {
 		const val = $event.target.value
 		if(val && val.length)
@@ -55,9 +53,8 @@ export default function Home() {
 					message &&
 					message.length > 3)
 	}
-	
   return (
-			<body>
+  <body>
 			<div id="wrapper" className="fade-in">
 					<div id="intro">
 						<h1>CAP<br />
@@ -76,10 +73,10 @@ export default function Home() {
 					</header>
 					<nav id="nav">
 						<ul className="links">
-							<li onClick={onClickServiceTab} className='active' id="service__tab">
+							<li onClick={onClickTab} className={(activeTab === 'service')? 'active': ''} id="service__tab">
 								<a href="#services">{t('links-services')}</a>
 							</li>
-							<li onClick={onClickAboutTab} id="about-us__tab">
+							<li onClick={onClickTab} className={(activeTab === 'about-us')? 'active': ''} id="about-us__tab">
 								<a href="#about-us">{t('links-about-us')}</a>
 							</li>
 						</ul>
@@ -177,15 +174,15 @@ export default function Home() {
 								<div className="fields">
 									<div className="field">
 										<label htmlFor="name">{t('form-name')}</label>
-										<input id="form__name" onChange={onChangeName} type="text" name="name" id="name" />
+										<input id="form__name" onChange={onChangeName} type="text" name="name" />
 									</div>
 									<div className="field">
 										<label htmlFor="email">Email </label>
-										<input id="form__email" onChange={onChangeEmail} type="email" name="email" id="email" />
+										<input id="form__email" onChange={onChangeEmail} type="email" name="email" />
 									</div>
 									<div className="field">
 										<label htmlFor="message">{t('form-message')}</label>
-										<textarea id="form__message" onChange={onChangeMessage} name="message" id="message" rows="3"></textarea>
+										<textarea id="form__message" onChange={onChangeMessage} name="message" rows="3"></textarea>
 									</div>
 								</div>
 								<ul className="actions">
@@ -228,5 +225,4 @@ export default function Home() {
 					</div>
 			</div>
 			</body>
-  )
-}
+)};

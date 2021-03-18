@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "jsx-a11y/label-has-associated-control": "off"
+  },
+  "extends": [
+    "airbnb-typescript",
+    "plugin:prettier/recommended"
+  ]
+}
