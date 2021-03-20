@@ -298,7 +298,7 @@ export default () => {
                     id="form__message"
                     onChange={onChangeMessage}
                     name="message"
-                    rows="3"
+                    rows={3}
                   />
                 </div>
               </div>
