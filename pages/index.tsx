@@ -1,53 +1,37 @@
 import React, { useState } from "react";
-import useTranslation from "next-translate/useTranslation";
+import { FormattedMessage, useIntl } from "react-intl";
 
-export default () => {
-  const { t } = useTranslation("common");
+const Index = () => {
+  const intl = useIntl();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  let activeTab = "services";
-  function sendWspMessage($event) {
-    $event.preventDefault();
+  const [activeTab, setActiveTab] = useState("services");
+
+  const sendWhatsappMessage = (event) => {
+    event.preventDefault();
     window.open(
       `https://api.whatsapp.com/send?phone=+393515398439&text=Sono ${name} ${message}. Il mio email ${email}`,
       "_blank"
     );
-  }
-  function sendMailMessage($event) {
-    $event.preventDefault();
-    window.location.href = `mailto:contatto@capcat.it?subject=${name}&body=${message}`;
-    window.open(
-      `mailto:contatto@capcat.it?subject=${name}&body=${message}`,
-      "_self"
-    );
-  }
-  function onClickTab() {
-    activeTab = activeTab === "services" ? "about-us" : "services";
-  }
+  };
 
-  function onChangeMessage($event) {
-    const val = $event.target.value;
-    if (val && val.length) setMessage(val);
-  }
-  function onChangeName($event) {
-    const val = $event.target.value;
-    if (val && val.length) setName(val);
-  }
-  function onChangeEmail($event) {
-    const val = $event.target.value;
-    if (val && val.length) setEmail(val);
-  }
-  function isFormValid() {
-    return Boolean(
-      email &&
-        email.length > 3 &&
-        name &&
-        name.length > 3 &&
-        message &&
-        message.length > 3
+  const sendMail = (event) => {
+    event.preventDefault();
+    window.open(
+      `mailto:info@capcat.it?subject=${name}&body=${message}`,
+      "_blank"
     );
-  }
+  };
+
+  const formValid =
+    email &&
+    email.length > 3 &&
+    name &&
+    name.length > 3 &&
+    message &&
+    message.length > 3;
+
   return (
     <body>
       <div id="wrapper" className="fade-in">
@@ -57,14 +41,16 @@ export default () => {
             <br />
             CAT
           </h1>
-          <p>{t("intro-title")}.</p>
+          <p>
+            <FormattedMessage id="intro-title" />
+          </p>
           <ul className="actions">
             <li>
               <a
                 href="#services"
                 className="button icon solid solo fa-arrow-down scrolly"
               >
-                {t("button-continue")}
+                <FormattedMessage id="button-continue" />
               </a>
             </li>
           </ul>
@@ -78,16 +64,16 @@ export default () => {
               className={activeTab === "service" ? "active" : ""}
               id="service__tab"
             >
-              <a href="#services" onClick={onClickTab}>
-                {t("links-services")}
+              <a href="/" onClick={() => setActiveTab("services")}>
+                <FormattedMessage id="links-services" />
               </a>
             </li>
             <li
               className={activeTab === "about-us" ? "active" : ""}
               id="about-us__tab"
             >
-              <a href="#about-us" onClick={onClickTab}>
-                {t("links-about-us")}
+              <a href="/" onClick={() => setActiveTab("about-us")}>
+                <FormattedMessage id="links-about-us" />
               </a>
             </li>
           </ul>
@@ -106,7 +92,7 @@ export default () => {
           <article id="about-us" className="post featured">
             <header className="major">
               <p>
-                {t("about-us-resume")}
+                <FormattedMessage id="about-us-resume" />
                 <br />
                 <br />
                 Cloud, Mobile, Web.
@@ -118,7 +104,7 @@ export default () => {
             <ul className="actions special">
               <li>
                 <a href="#footer" className="button large">
-                  {t("button-contact-us")}
+                  <FormattedMessage id="button-contact-us" />
                 </a>
               </li>
             </ul>
@@ -129,8 +115,9 @@ export default () => {
               <header className="service__header">
                 <h2>
                   <a href="/">
-                    {t("services-cloud")} <br />
-                    {t("services-cloud-2")}
+                    <FormattedMessage id="services-cloud" />
+                    <br />
+                    <FormattedMessage id="services-cloud-2" />
                   </a>
                 </h2>
               </header>
@@ -144,7 +131,7 @@ export default () => {
               <ul className="actions special">
                 <li>
                   <a href="#footer" className="button">
-                    {t("button-contact-us")}
+                    <FormattedMessage id="button-contact-us" />
                   </a>
                 </li>
               </ul>
@@ -153,8 +140,9 @@ export default () => {
               <header className="service__header">
                 <h2>
                   <a href="/">
-                    {t("services-problem-solving")} <br />
-                    {t("services-problem-solving-2")}
+                    <FormattedMessage id="services-problem-solving" />
+                    <br />
+                    <FormattedMessage id="services-problem-solving-2" />
                   </a>
                 </h2>
               </header>
@@ -164,11 +152,13 @@ export default () => {
                   alt="soluzioni digitali"
                 />
               </a>
-              <p>{t("services-problem-solving-3")}.</p>
+              <p>
+                <FormattedMessage id="services-problem-solving-3" />.
+              </p>
               <ul className="actions special">
                 <li>
                   <a href="#footer" className="button">
-                    {t("button-contact-us")}
+                    <FormattedMessage id="button-contact-us" />
                   </a>
                 </li>
               </ul>
@@ -177,9 +167,9 @@ export default () => {
               <header className="service__header">
                 <h2>
                   <a href="/">
-                    {t("services-development")}
+                    <FormattedMessage id="services-development" />
                     <br />
-                    {t("services-development-2")}
+                    <FormattedMessage id="services-development-2" />
                   </a>
                 </h2>
               </header>
@@ -189,11 +179,13 @@ export default () => {
                   alt="free lance software"
                 />
               </a>
-              <p>{t("services-development-3")}.</p>
+              <p>
+                <FormattedMessage id="services-development-3" />.
+              </p>
               <ul className="actions special">
                 <li>
                   <a href="#footer" className="button">
-                    {t("button-contact-us")}
+                    <FormattedMessage id="button-contact-us" />
                   </a>
                 </li>
               </ul>
@@ -213,11 +205,13 @@ export default () => {
                   alt="saleforce implementazione"
                 />
               </a>
-              <p>{t("services-salesforce")}.</p>
+              <p>
+                <FormattedMessage id="services-salesforce" />.
+              </p>
               <ul className="actions special">
                 <li>
                   <a href="#footer" className="button">
-                    {t("button-contact-us")}
+                    <FormattedMessage id="button-contact-us" />
                   </a>
                 </li>
               </ul>
@@ -237,11 +231,13 @@ export default () => {
                   alt="Sviluppo mobile android e ios"
                 />
               </a>
-              <p>{t("services-quotation")}.</p>
+              <p>
+                <FormattedMessage id="services-quotation" />.
+              </p>
               <ul className="actions special">
                 <li>
                   <a href="#footer" className="button">
-                    {t("button-contact-us")}
+                    <FormattedMessage id="button-contact-us" />
                   </a>
                 </li>
               </ul>
@@ -258,11 +254,13 @@ export default () => {
               <a href="/" className="image fit">
                 <img src="images/graphic-design.jpg" alt="disegno grafico" />
               </a>
-              <p>{t("services-graphic-design")}.</p>
+              <p>
+                <FormattedMessage id="services-graphic-design" />.
+              </p>
               <ul className="actions special">
                 <li>
                   <a href="#footer" className="button">
-                    {t("button-contact-us")}
+                    <FormattedMessage id="button-contact-us" />
                   </a>
                 </li>
               </ul>
@@ -275,10 +273,12 @@ export default () => {
             <form method="post" action="#">
               <div className="fields">
                 <div className="field">
-                  <label htmlFor="name">{t("form-name")}</label>
+                  <label htmlFor="name">
+                    <FormattedMessage id="form-name" />
+                  </label>
                   <input
                     id="form__name"
-                    onChange={onChangeName}
+                    onChange={({ target }) => setName(target.value)}
                     type="text"
                     name="name"
                   />
@@ -287,16 +287,18 @@ export default () => {
                   <label htmlFor="email">Email </label>
                   <input
                     id="form__email"
-                    onChange={onChangeEmail}
+                    onChange={({ target }) => setEmail(target.value)}
                     type="email"
                     name="email"
                   />
                 </div>
                 <div className="field">
-                  <label htmlFor="message">{t("form-message")}</label>
+                  <label htmlFor="message">
+                    <FormattedMessage id="form-message" />
+                  </label>
                   <textarea
                     id="form__message"
-                    onChange={onChangeMessage}
+                    onChange={({ target }) => setMessage(target.value)}
                     name="message"
                     rows={3}
                   />
@@ -306,18 +308,20 @@ export default () => {
                 <li>
                   <input
                     type="submit"
-                    onClick={sendMailMessage}
-                    disabled={!isFormValid()}
-                    value={t("form-submit")}
+                    onClick={sendMail}
+                    disabled={!formValid}
+                    value={intl.formatMessage({ id: "form-submit" })}
                   />
                 </li>
                 <li>
                   <input
                     id="form__submit-wsp"
-                    disabled={!isFormValid()}
+                    disabled={!formValid}
                     type="submit"
-                    onClick={sendWspMessage}
-                    value={`${t("form-submit")} Whatsapp`}
+                    onClick={sendWhatsappMessage}
+                    value={`${intl.formatMessage({
+                      id: "form-submit",
+                    })} Whatsapp`}
                   />
                 </li>
               </ul>
@@ -325,7 +329,7 @@ export default () => {
           </section>
           <section className="split contact">
             <section className="alt">
-              <h3>{t("form-address")}</h3>
+              <h3>{intl.formatMessage({ id: "form-address" })}</h3>
               <p>
                 Via padre bernardino dal vago 10
                 <br />
@@ -364,3 +368,5 @@ export default () => {
     </body>
   );
 };
+
+export default Index;
