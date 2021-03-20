@@ -15,5 +15,9 @@
   "extends": [
     "airbnb-typescript",
     "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": [
+    "next.config.js",
+    "next-i18next.config.js"
   ]
 }
