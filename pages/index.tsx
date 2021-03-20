@@ -182,7 +182,7 @@ export default () => {
 									</div>
 									<div className="field">
 										<label htmlFor="message">{t('form-message')}</label>
-										<textarea id="form__message" onChange={onChangeMessage} name="message" rows="3"></textarea>
+										<textarea id="form__message" onChange={onChangeMessage} name="message" rows={3}></textarea>
 									</div>
 								</div>
 								<ul className="actions">
