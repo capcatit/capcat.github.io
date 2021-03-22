@@ -6,7 +6,8 @@
     "dev": "next dev",
     "lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "fix-build": "mv .next/static out/_next/"
   },
   "dependencies": {
     "i18next": "^19.8.4",

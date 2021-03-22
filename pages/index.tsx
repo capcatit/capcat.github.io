@@ -64,7 +64,7 @@ const Index = () => {
               className={activeTab === "service" ? "active" : ""}
               id="service__tab"
             >
-              <a href="/" onClick={() => setActiveTab("services")}>
+              <a href="#services" onClick={() => setActiveTab("services")}>
                 <FormattedMessage id="links-services" />
               </a>
             </li>
@@ -72,7 +72,7 @@ const Index = () => {
               className={activeTab === "about-us" ? "active" : ""}
               id="about-us__tab"
             >
-              <a href="/" onClick={() => setActiveTab("about-us")}>
+              <a href="#about-us" onClick={() => setActiveTab("about-us")}>
                 <FormattedMessage id="links-about-us" />
               </a>
             </li>
@@ -338,7 +338,7 @@ const Index = () => {
             <section>
               <h3>Email</h3>
               <p>
-                <a href="/">contatto@capcat.it</a>
+                <a href="#">contatto@capcat.it</a>
               </p>
             </section>
             <section>
