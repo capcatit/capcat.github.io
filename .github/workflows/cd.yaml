@@ -26,6 +26,7 @@ jobs:
       - run: node_modules/.bin/next telemetry disable
       - run: npm run lint
       - run: npm run build
+      - run: npm run fix-build
       - run: touch out/.nojekyll
       - run: cp CNAME out/CNAME
       - if: success()
