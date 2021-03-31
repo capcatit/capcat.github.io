@@ -1,8 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import Service from '../components/Service';
+import React from "react";
+import Head from "next/head";
+import Service from "../components/Service";
 
-const mailUrl = `mailto:info@capcat.it?subject=${encodeURIComponent('Richiesta informazioni')}`;
+const mailUrl = `mailto:info@capcat.it?subject=${encodeURIComponent(
+  "Richiesta informazioni"
+)}`;
 
 const Index = () => (
   <>
@@ -12,17 +14,14 @@ const Index = () => (
     </Head>
     <div className="container">
       <header className="mt-5 mb-5 text-center">
-        <h1 className="display-1">
-          CapCat
-        </h1>
-        <h2 className="text-muted fw-normal mb-3">
-          Servizi Informatici
-        </h2>
+        <h1 className="display-1">CapCat</h1>
+        <h2 className="text-muted fw-normal mb-3">Servizi Informatici</h2>
         <p>
-          <i className="bi bi-geo-alt-fill"></i> Vicenza
+          <i className="bi bi-geo-alt-fill" /> Vicenza
         </p>
         <p>
-          <i className="bi bi-envelope-fill"></i> <a href={mailUrl}>info@capcat.it</a>
+          <i className="bi bi-envelope-fill" />{" "}
+          <a href={mailUrl}>info@capcat.it</a>
         </p>
       </header>
 
@@ -49,8 +48,8 @@ const Index = () => (
 
         <h2 className="mt-5 mb-3">Contatti</h2>
         <p>
-          Scrivici una mail a <a href={mailUrl}>info@capcat.it</a>,
-          ti risponderemo nell'arco di 24 ore.
+          Scrivici una mail a <a href={mailUrl}>info@capcat.it</a>, ti
+          risponderemo nell&apos;arco di 24 ore.
         </p>
       </main>
 
@@ -59,7 +58,8 @@ const Index = () => (
       <footer>
         <p className="text-center">
           <small>
-            Copyright © CapCat { new Date().getFullYear() } - Tutti i diritti riservati
+            Copyright © CapCat {new Date().getFullYear()} - Tutti i diritti
+            riservati
           </small>
         </p>
       </footer>

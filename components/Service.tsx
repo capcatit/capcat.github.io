@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const Service = ({ title, description, image }) => (
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const Service = ({ title, description, image }: Props) => (
   <div className="col">
     <div className="card h-100">
       <img src={image} className="card-img-top" alt={title} />
       <div className="card-body">
-        <h5 className="card-title">
-          { title }
-        </h5>
-        <p className="card-text">
-          { description }
-        </p>
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
       </div>
     </div>
   </div>
