@@ -5,19 +5,13 @@
     "project": "./tsconfig.json"
   },
   "plugins": [
-    "@typescript-eslint",
-    "prettier"
+    "@typescript-eslint"
   ],
-  "rules": {
-    "prettier/prettier": "error",
-    "jsx-a11y/label-has-associated-control": "off"
-  },
   "extends": [
     "airbnb-typescript",
     "plugin:prettier/recommended"
   ],
-  "ignorePatterns": [
-    "next.config.js",
-    "next-i18next.config.js"
-  ]
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }
